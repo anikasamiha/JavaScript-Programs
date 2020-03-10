@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JavaScript Operators</title>
+</head>
+<body>
+<h2> Result of Basketball Match</h2>
+<p id="avg1"></p>
+<p id="avg2"></p>
+<p id="winners"></p>
+<p id="draw"></p>
+<script type="text/javascript">
+var team1=[80,120,140];
+var len1=team1.length;
+var sum1=0;
+for(var i=0;i<len1;i++)
+{
+	sum1 += team1[i];
+}
+var result1=sum1/3;
+document.getElementById("avg1").innerHTML= "Average score of team 1 is :" +result1;
+
+var team2=[114,94,123];
+var len2=team2.length;
+var sum2=0;
+for(var j=0;j<len2;j++)
+{
+	sum2 += team2[j];
+}
+var result2=sum2/3;
+document.getElementById("avg2").innerHTML= "Average score of team 2 is :" +result2;
+
+if(sum1>sum2)
+{
+	document.getElementById("winners").innerHTML= "Winners are team 1";
+}
+else
+{
+	document.getElementById("winners").innerHTML= "Winners are team 2";
+}
+team2[2]=132;
+var sum3=0;
+for(var k=0;k<len2;k++)
+{
+	sum3 += team2[k];
+}
+if(sum1==sum3)
+{
+	document.getElementById("draw").innerHTML= "Match is draw";
+}
+else
+{
+	document.getElementById("draw").innerHTML= "Anyone team is the winner";
+}
+</script>
+</html>
